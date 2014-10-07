@@ -3,18 +3,20 @@ part of clock;
 
 typedef Duration _Elapsed();
 
-class RelativeClock extends Clock {
+class _RelativeClock implements Clock {
   
   final DateTime _initialTime;
   final _Elapsed _elapsed;
   final int _frequency;
   
-  RelativeClock(this._initialTime, Duration elapsed(), {
+  _RelativeClock({
+    DateTime initialTime, 
+    Duration elapsed(),
     int frequency: 1000000
   }) 
-      : _elapsed = elapsed,
-        _frequency = frequency,
-        super();
+      : _initialTime = initialTime == null ? _zonedClock.value.now : initialTime,
+        _elapsed = elapsed == null ? (() => Duration.ZERO) : elapsed,
+        _frequency = frequency;
   
   DateTime get now => _initialTime.add(_elapsed());
   Stopwatch getStopwatch() => new FakeStopwatch(() => 

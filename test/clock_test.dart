@@ -7,6 +7,19 @@ import 'package:clock/clock.dart';
 import 'package:clock/src/fake_stopwatch.dart';
 
 main() {
+  
+  group('now', () {
+    test('should return a DateTime', () {
+      expect(now, new isInstanceOf<DateTime>());
+    });
+  });
+  
+  group('getStopwatch', () {
+    test('should return a Stopwatch', () {
+      expect(getStopwatch(), new isInstanceOf<Stopwatch>());
+    });
+  });
+
   group('withClock', () {
     
     var mockClock;

@@ -12,7 +12,7 @@ main() {
     Clock fakeClock;
     
     setUp(() {
-      fakeClock = new Clock.relative(initialTime, () => elapsed);
+      fakeClock = new Clock(initialTime: initialTime, elapsed: () => elapsed);
     });
     
     group('FakeClock', () {
