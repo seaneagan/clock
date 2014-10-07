@@ -1,4 +1,4 @@
-clock [![pub package](http://img.shields.io/pub/v/box2d.svg)](https://pub.dartlang.org/packages/clock)
+clock [![pub package](http://img.shields.io/pub/v/clock.svg)](https://pub.dartlang.org/packages/clock) [![Build Status](https://drone.io/github.com/seaneagan/clock/status.png)](https://drone.io/github.com/seaneagan/clock/latest)
 =====
 
 The `clock` package provides testable replacements for the system clock APIs

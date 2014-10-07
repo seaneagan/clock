@@ -1,5 +1,5 @@
 name: clock
-version: 0.1.0
+version: 0.1.1
 author: Sean Eagan <seaneagan1@gmail.com>
 description: Provides testable replacements for the system clock APIs (`new DateTime.now()` and `new Stopwatch()`).
 homepage: https://github.com/seaneagan/clock
