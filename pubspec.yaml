@@ -4,5 +4,5 @@ author: Sean Eagan <seaneagan1@gmail.com>
 description: Provides testable replacements for the system clock APIs (`new DateTime.now()` and `new Stopwatch()`).
 homepage: https://github.com/seaneagan/clock
 dev_dependencies:
-  mock: any
-  unittest: any
+  mock: '>=0.11.0 <0.12.0'
+  unittest: '>=0.11.0 <0.12.0'
