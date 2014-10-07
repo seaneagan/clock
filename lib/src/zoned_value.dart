@@ -12,13 +12,13 @@ class ZonedValue<T> {
   
   ZonedValue(T rootValue) : _rootValue = rootValue;
   
-  void withValue(T value, f(), {
+  withValue(T value, f(), {
       bool isFinal: false}
   ) {
     if(this.isFinal) {
       throw new StateError('Cannot override final zoned value');
     }
-    runZoned(f, zoneValues: {
+    return runZoned(f, zoneValues: {
       _valueKey: value,
       _finalKey: isFinal
     });

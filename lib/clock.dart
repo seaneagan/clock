@@ -29,7 +29,7 @@ Stopwatch getStopwatch() => _zonedClock.value.getStopwatch();
 /// [callback].
 /// 
 /// Set [isFinal] to `true` to prevent any nested overriding of the [clock].
-void withClock(Clock clock, callback(), {isFinal: false}) => 
+withClock(Clock clock, callback(), {isFinal: false}) => 
     _zonedClock.withValue(clock, callback, isFinal: isFinal);
 
 var _zonedClock = new ZonedValue(new _SystemClock());
