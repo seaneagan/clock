@@ -32,6 +32,6 @@ class ZonedValue<T> {
   T get value {
     // TODO: Allow null values when http://dartbug.com/21247 is fixed.
     var v = Zone.current[_valueKey];
-    return v != null ? v : _rootValue;
+    return v != null ? v as T : _rootValue;
   }
 }
